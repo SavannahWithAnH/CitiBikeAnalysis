@@ -1,4 +1,3 @@
-// set json end
 const auto_data="../Resources/Largest automakers by market capitalization.json";
 const auto_stockfeed="../Resources/Top 10 Automaker Stocks 2010-2022.json";
 console.log(auto_data);
@@ -7,31 +6,48 @@ var option = '';
 var dataSet ;
 
 
-
-// function init() {
-
   d3.json(auto_data).then(function(data) {
     dataSet = data;
+
+    var optionMenu = d3.select('#selDataset');
+
+    console.log(dataSet.Name)
+
+    for (let i=0; i < 10; i++) {
+      optionMenu.append('option').text(dataSet.Name[String(i)]).property('value', dataSet.Symbol[String(i)]);
+    };
 
     console.log(dataSet)});
 
   d3.json(auto_stockfeed).then(function(stockfeed) {
       dataSet = stockfeed;
-  
+
+      // displayLineChart('TM',dataSet);
+
       console.log(dataSet)});
+  
+      function init() {
+        $.getJSON(auto_data, function (data) {
+          dataSet = data;
+          console.log(dataSet.Name);
+        });
+        $.getJSON(auto_stockfeed, function (data) {
+          stockfeed = data;
+          console.log(stockfeed);
+        });
+        displayLineChart(option, dataSet);
+      }
+      // function init() {
+      //   option = 'TSLA';
+      //   displayLineChart(option,dataSet);
+    // init();
   // }
-
-// init();
-
+    
 //     displayMetaData(940,dataSet);
 //     displayHBarChart(940,dataSet);
-//     displayBubbleChart(940,dataSet);
+    
 
-//     var optionMenu = d3.select('#selDataset');
 
-//     data.names.forEach(function(name){
-//       optionMenu.append('option').text(name);
-//     });
 //  })
 // }
 
@@ -41,12 +57,10 @@ var dataSet ;
 //     });
 //   }
 
-// function optionChanged(value) {
-//     option = value;
-//     displayMetaData(option,dataSet);
-//     displayHBarChart(option,dataSet);
-//     displayBubbleChart(option,dataSet);
-// }
+function optionChanged(value) {
+    option = value;
+    displayLineChart(option,dataSet);
+}
 
 // function displayMetaData(option,dataSet) {
     
@@ -113,52 +127,46 @@ var dataSet ;
 //     Plotly.newPlot('bar',data,layout);
 // }
 
-// function displayBubbleChart(option,dataSet) {
+function displayLineChart(option,dataSet) {
 
-//     var barData = dataSet.samples.filter(sample => sample.id == option);
-//     console.log(barData); 
+  var x = []
+  var y = []
 
-//     var x = barData.map(row =>row.otu_ids); 
-//     var y = barData.map(row =>row.sample_values); 
-//     var text = barData.map(row =>row.otu_labels);
-//     var marker_size = barData.map(row =>row.sample_values);
-//     var marker_color = barData.map(row =>row.otu_ids);
-    
-//     console.log(x[0]);
-//     console.log(y[0]);
-//     console.log(text);
-    
-//     var trace1 = {
-//         x:x[0],
-//         y:y[0],
-//         text: text[0],
-//         mode:'markers',
-//         marker: {
-//             color: marker_color[0],
-//             size: marker_size[0],
-//             colorscale: 'Jet'
-//         }
-        
-//     };
+    dataSet.forEach(element => {
+      if (element.Symbol == option) {
+      x.push(element.Date);
+      y.push(element['Adj Close'])  
+      }
+    });
+    console.log(x, y); 
+  
+    var trace1 = {
+        x:x,
+        y:y,
+        type:'scatter',
+        mode: 'lines',
+        line: {
+          color: '#000000',
+          width: 1.5
+        }
+      }       
 
-//     var data = [trace1];
+    var data = [trace1];
 
-//     var layout = {
-//         xaxis:{
-//             title: 'OTU ID'
-//         },
-//         yaxis:{
-//             title: 'Bacteria Cultures Per Sample'
-//         }
-//     };
+    var layout = {
+        xaxis:{
+            title: 'Year'
+        },
+        yaxis:{
+            title: 'Adjusted Close Value'
+        },
+        title: 'Stock Value 2010-2022'
+    };
 
-//     Plotly.newPlot('bubble',data,layout);
+    Plotly.newPlot('line',data,layout);
 
-// }
+}
 
-
-
-// init();
 
 
  
