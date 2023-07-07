@@ -1,6 +1,6 @@
 const auto_data="../Resources/Largest automakers by market capitalization.json";
 const auto_stockfeed="../Resources/Top 10 Automaker Stocks 2010-2022.json";
-console.log(auto_data);
+// console.log(auto_data);
 
 var option = '';
 var dataSet ;
@@ -11,36 +11,39 @@ var dataSet ;
 
     var optionMenu = d3.select('#selDataset');
 
-    console.log(dataSet.Name)
+    // console.log(dataSet.Name)
 
     for (let i=0; i < 10; i++) {
       optionMenu.append('option').text(dataSet.Name[String(i)]).property('value', dataSet.Symbol[String(i)]);
     };
 
-    console.log(dataSet)});
+    // console.log(dataSet)
+  });
 
   d3.json(auto_stockfeed).then(function(stockfeed) {
       dataSet = stockfeed;
 
-      // displayLineChart('TM',dataSet);
-
-      console.log(dataSet)});
+      // console.log(dataSet)
+    });
   
       function init() {
-        $.getJSON(auto_data, function (data) {
+        let option1=d3.select('#selDataset');
+        console.log(option1.text);
+        d3.json(auto_stockfeed).then(function (data) {
           dataSet = data;
-          console.log(dataSet.Name);
+          displayLineChart(option1, dataSet);
+          // console.log(dataSet);
         });
-        $.getJSON(auto_stockfeed, function (data) {
-          stockfeed = data;
-          console.log(stockfeed);
-        });
-        displayLineChart(option, dataSet);
+        // $.getJSON(auto_stockfeed, function (data) {
+        //   stockfeed = data;
+        //   console.log(stockfeed);
+        // });
       }
+      init();
       // function init() {
       //   option = 'TSLA';
       //   displayLineChart(option,dataSet);
-    // init();
+
   // }
     
 //     displayMetaData(940,dataSet);
@@ -132,13 +135,17 @@ function displayLineChart(option,dataSet) {
   var x = []
   var y = []
 
+console.log(option);
+console.log(dataSet);
+
+
     dataSet.forEach(element => {
       if (element.Symbol == option) {
       x.push(element.Date);
       y.push(element['Adj Close'])  
       }
     });
-    console.log(x, y); 
+    // console.log(x, y); 
   
     var trace1 = {
         x:x,
