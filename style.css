@@ -10,4 +10,9 @@ body {
   html {
     height: 100%;
   }
-  
+
+  /* set logo for car manfacturuer */
+  .img-flag {
+    height: .5px;
+    width: .5px;
+  }  
