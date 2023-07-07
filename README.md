@@ -1,8 +1,8 @@
 # Project Contributors & Responsibilities
-- Alex Kopp - Python/Flask
-- Andrew Skorupa - SQL
-- Savannah Porter - Javascript
-- Mohamed Abouelkhier - HTML/CSS
+- Alex Kopp - Python-Flask/Visualization 1
+- Andrew Skorupa - SQL/Entity Relationship Diagram
+- Savannah Porter - Data Conversions/Javascript/Visualizations 2 & 3
+- Mohamed Abouelkhier - HTML-CSS/Visualization 4
 
 # Visualization Topic:
 - Automanufacturer stock price following the IPO of Tesla (2012-2022)
