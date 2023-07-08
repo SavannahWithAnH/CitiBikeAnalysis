@@ -2,14 +2,14 @@ const auto_data="../Resources/Largest automakers by market capitalization.json";
 const auto_stockfeed="../Resources/Top 10 Automaker Stocks 2010-2022.json";
 // console.log(auto_data);
 
-var option = '';
-var dataSet ;
+let option = '';
+let dataSet ;
 
 
   d3.json(auto_data).then(function(data) {
     dataSet = data;
 
-    var optionMenu = d3.select('#selDataset');
+    let optionMenu = d3.select('#selDataset');
 
     // console.log(dataSet.Name)
 
@@ -132,8 +132,8 @@ function optionChanged(value) {
 
 function displayLineChart(option,dataSet) {
 
-  var x = []
-  var y = []
+  let x = []
+  let y = []
 
 console.log(option);
 console.log(dataSet);
@@ -147,7 +147,7 @@ console.log(dataSet);
     });
     // console.log(x, y); 
   
-    var trace1 = {
+    let trace1 = {
         x:x,
         y:y,
         type:'scatter',
@@ -158,9 +158,9 @@ console.log(dataSet);
         }
       }       
 
-    var data = [trace1];
+    let data = [trace1];
 
-    var layout = {
+    let layout = {
         xaxis:{
             title: 'Year'
         },
