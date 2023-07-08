@@ -1,18 +1,17 @@
 /* Remove the default margin and padding from the body. */
-body {
+body, html {
     padding: 0;
     margin: 0;
+    height: 100%;
   }
   
   /* Set map, body, and html to 100% of the screen size. */
-  #map,
-  body,
-  html {
+  #map {
     height: 100%;
   }
 
   /* set logo for car manfacturuer */
   .img-flag {
-    height: .5px;
-    width: .5px;
+    height: 50px;
+    width: 50px;
   }  

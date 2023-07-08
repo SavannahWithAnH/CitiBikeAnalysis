@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Automaker Stock Price Analysis Post Tesla IPO</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
@@ -20,18 +22,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="well">
           <h5>Select Automaker:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <h3 class="panel-title" style="color:rgb(0, 0, 0);"><b>Automaker Details</b></h3>
+      </div>
+      <div class="col-md-9">
+          <div id="map" style="height: 400px;"></div>
           </div>
-          <div id="sample-metadata" class="panel-body">
+          <!-- <div id="sample-metadata" class="panel-body">
             <p>test</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-md-5">
@@ -48,10 +50,18 @@
       </div>
     </div>
   </div>
+  <!-- leaflet javascript code -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+ <!-- loading infoMap.js -->
+  <script type="text/javascript" src="../static/infoMap.js"></script>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="../static/automakers.js"></script>
+  
+  
 
 </body>
 
