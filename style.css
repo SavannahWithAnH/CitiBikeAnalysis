@@ -15,3 +15,6 @@ body, html {
     height: 50px;
     width: 50px;
   }  
+  .custom-width {
+    width: 800px;
+}
