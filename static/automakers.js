@@ -1,4 +1,4 @@
-const auto_data="../Resources/Largest automakers by market capitalization.json";
+const auto_data="../Resources/infoMapData.json";
 const auto_stockfeed="../Resources/Top 10 Automaker Stocks 2010-2022.json";
 // console.log(auto_data);
 
