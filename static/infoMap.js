@@ -51,14 +51,18 @@ d3.json(largestData).then(function (data) {
       iconAnchor: [19, 19],
       popupAnchor: [-3, -76],
     });
-
-    L.marker([company.Latitude, company.Longitude], { icon: customIcon })
-      .bindPopup(
+// assigning the marker to a variable
+    let marker = L.marker([company.Latitude, company.Longitude], { icon: customIcon });
+      marker.bindPopup(
         `<h3>${company.Name}</h3>
         <h2>rank: ${company.Rank}</h2>
         <p>Market Cap: ${company.marketcap}<br>Price (USD): ${company["price (USD)"]}</p>`
       )
-      .addTo(myMap);
+      .addTo(myMap);// giving a function for .on('click)
+      marker.on('click', function(e){
+        myMap.setView(e.latlng, 8)
+      })
   });
 });
 //refrences: https://leaflet-extras.github.io/leaflet-providers/preview/ for the base map
+//https://stackoverflow.com/questions/16927793/marker-in-leaflet-click-event for the zoom in and center markers when clicked
