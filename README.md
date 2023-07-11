@@ -18,11 +18,11 @@
 - Where are companies located? 
 
  # Data collection, cleaning, and analysis tools
-  Python to clean and convert csv files to json
-  SQL to query dataset *
-  Plotly for bar and line graphs
-  Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting
-  Flask app to serve up the dashboard
+  * Python to clean and convert csv files to json  
+  * SQL to query dataset *  
+  * Plotly for bar and line graphs  
+  * Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting  
+  * Flask app to serve up the dashboard  
 
  
   sql erd image *
