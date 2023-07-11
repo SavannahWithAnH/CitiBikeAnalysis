@@ -1,13 +1,13 @@
 # Please see our proposal <here>
 
+# Topic:
+- Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
+
 # Contributors & Responsibilities
 - Alex Kopp - Python/Flask App
 - Andrew Skorupa - SQL/Entity Relationship Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
 - Mohamed Abouelkhier - HTML/CSS/Map
-
-# Topic:
-- Automanufacturer stock price following the IPO of Tesla (2010-2022)
  
 # Click <here> to view the Dataset at it's source
 - https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022
