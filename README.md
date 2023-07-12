@@ -16,7 +16,7 @@
 - What companies have lost the most market capitalization?
 - Where are companies located? 
 
-# Data collection, cleaning, and analysis tools
+# Data collection, cleaning, analysis, and visualization tools
 - Python to clean and convert csv files to json *
 - SQL to query creating tables, joining the data, and creating presentable output.
 - ** for interactive map
