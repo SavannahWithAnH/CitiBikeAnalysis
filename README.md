@@ -1,4 +1,4 @@
-## Please see our proposal [here]().
+## Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20One%20Pager.docx). and select 'View Raw'.
 
 # Topic
 - Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
@@ -19,7 +19,7 @@
 # Data collection, cleaning, analysis, and visualization tools
 - Python to clean and convert csv files to json *
 - SQL to query creating tables, joining the data, and creating presentable output.
-- ** for interactive map
+- Leaflet for interactive world map
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
 - Flask app to serve up the dashboard  *
