@@ -1,4 +1,4 @@
-## Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20One%20Pager.docx) and select 'View raw'.
+## Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
 
 # Topic
 - Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
