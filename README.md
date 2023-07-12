@@ -24,7 +24,7 @@
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
 - Flask app to serve up the dashboard 
 
-[Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png  
+[Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
 
 dashboard image *
  
