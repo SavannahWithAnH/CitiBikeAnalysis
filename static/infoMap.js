@@ -1,29 +1,7 @@
 
 //create base layer to the map
 // adding variables to the layer
-// new L.basemapsSwitcher([
-//     {
-//       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//       }).addTo(myMap), //DEFAULT MAP
-//       icon: './assets/images/img1.PNG',
-//       name: 'Map one'
-//     },
-//     {
-//       layer: L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',{
-//         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-//       }),
-//       icon: './assets/images/img2.PNG',
-//       name: 'Map two'
-//     },
-//     {
-//       layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-//         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-//       }),
-//       icon: './assets/images/img3.PNG',
-//       name: 'Map three'
-//     },
-//   ], { position: 'topright' }).addTo(myMap);
+
 let street = L.tileLayer(
   "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
   {
@@ -130,7 +108,7 @@ d3.json(largestData).then(function (data) {
   companies.forEach((company) => {
     let customIcon = L.icon({
       iconUrl: company.Logo,
-      iconSize: [25, 25],
+      iconSize: [30, 30],
       iconAnchor: [19, 19],
       popupAnchor: [-3, -76],
     });
