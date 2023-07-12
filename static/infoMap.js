@@ -1,9 +1,29 @@
-let myMap = L.map("map", {
-  center: [39, 4],
-  zoom: 1.5,
-});
+
 //create base layer to the map
 // adding variables to the layer
+// new L.basemapsSwitcher([
+//     {
+//       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//       }).addTo(myMap), //DEFAULT MAP
+//       icon: './assets/images/img1.PNG',
+//       name: 'Map one'
+//     },
+//     {
+//       layer: L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',{
+//         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+//       }),
+//       icon: './assets/images/img2.PNG',
+//       name: 'Map two'
+//     },
+//     {
+//       layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+//         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+//       }),
+//       icon: './assets/images/img3.PNG',
+//       name: 'Map three'
+//     },
+//   ], { position: 'topright' }).addTo(myMap);
 let street = L.tileLayer(
   "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
   {
@@ -12,8 +32,71 @@ let street = L.tileLayer(
       'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>' +
       "<br> Analyst: Mo Abou <a href=https://github.com/nabroo101> Github<a/>",
   }
-).addTo(myMap);
-// fg
+);
+
+let Staellite = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+  attribution:
+    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' +
+    "<br> Analyst: Mo Abou <a href=https://github.com/nabroo101/leaflet-challenge> Github<a/>",
+});
+
+let carManufacturers = new L.layerGroup(); // This layer group contains all the car manufacturer icons
+
+
+// creating a base map object
+let baseMaps = {
+  "Street Map": street,
+  "Staellite": Staellite,
+};
+
+let ranking = new L.layerGroup();
+
+//creating overlay object
+let overlayMaps = {
+  Ranking: ranking,
+  "Manufacturers info": carManufacturers,
+};
+
+let myMap = L.map("map", {
+  center: [39, 4],
+  zoom: 2,
+  layers: [street, ranking],
+});
+
+let originalZoom = myMap.getZoom();
+let originalCenter = myMap.getCenter();
+
+L.control
+  .layers(baseMaps, overlayMaps, {
+    collapsed: false,
+  })
+  .addTo(myMap);
+
+
+//creating a button element 
+let exitButton = L.control({ position: 'bottomright' });
+
+exitButton.onAdd = function (myMap) {
+  this._div = L.DomUtil.create('div', "exit-button");
+  this._div.innerHTML = 'Exit';
+  this._div.onmousedown = this._div.onclick = function () {
+    myMap.setView(originalCenter, originalZoom);
+  };
+  return this._div;
+};
+// Adding the exit button to the map
+exitButton.addTo(myMap);
+
+
+// Event listener for the button
+document.querySelector('.exit-button').addEventListener('click', function () {
+  myMap.setView(originalCenter, originalZoom);
+});
+
+
+
+
+
 const largestData = "../Resources/infoMapData.json";
 
 // converting the json file to a difrrent format
@@ -51,18 +134,17 @@ d3.json(largestData).then(function (data) {
       iconAnchor: [19, 19],
       popupAnchor: [-3, -76],
     });
-// assigning the marker to a variable
+    // assigning the marker to a variable
     let marker = L.marker([company.Latitude, company.Longitude], { icon: customIcon });
-      marker.bindPopup(
-        `<h3>${company.Name}</h3>
+    marker.bindPopup(
+      `<h3>${company.Name}</h3>
         <h2>rank: ${company.Rank}</h2>
         <p>Market Cap: ${company.marketcap}<br>Price (USD): ${company["price (USD)"]}</p>`
-      )
-      .addTo(myMap);// giving a function for .on('click)
-      marker.on('click', function(e){
+    )
+      .on('click', function (e) {
         myMap.setView(e.latlng, 8)
-      })
+      }).addTo(carManufacturers)
   });
-});
+  });
 //refrences: https://leaflet-extras.github.io/leaflet-providers/preview/ for the base map
 //https://stackoverflow.com/questions/16927793/marker-in-leaflet-click-event for the zoom in and center markers when clicked
