@@ -17,12 +17,12 @@
 - Where are companies located? 
 
 # Data collection, cleaning, analysis, and visualization tools
-- Python to clean and convert csv files to json
+- Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
-- Leaflet for interactive world map
+- Leaflet *** for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
-- Flask app to serve up the dashboard 
+- Flask app to serve up the dashboard. 
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
 
