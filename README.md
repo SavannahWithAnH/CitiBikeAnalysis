@@ -1,6 +1,6 @@
 ## Please see our proposal [here]().
 
-# Topic:
+# Topic
 - Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
 
 # Contributors & Responsibilities
@@ -11,7 +11,7 @@
  
 ## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the Dataset at it's source!
 
-# Deliverables:
+# Deliverables
 - What companies have gained the most market capitalization?
 - What companies have lost the most market capitalization?
 - Where are companies located? 
