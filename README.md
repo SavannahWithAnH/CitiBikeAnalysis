@@ -1,15 +1,15 @@
-## Please see our proposal [here]().
+## Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
 
 # Topic
 - Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
 
 # Contributors & Responsibilities
 - Alex Kopp - Python/Flask App
-- Andrew Skorupa - SQL/Entity Relationship Diagram
+- Andrew Skorupa - SQL/Entity Relational Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
 - Mohamed Abouelkhier - HTML/CSS/Map
  
-## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the Dataset at it's source!
+## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the dataset at it's source!
 
 # Deliverables
 - What companies have gained the most market capitalization?
@@ -17,14 +17,14 @@
 - Where are companies located? 
 
 # Data collection, cleaning, analysis, and visualization tools
-- Python to clean and convert csv files to json *
+- Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
-- ** for interactive map
+- Leaflet *** for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
-- Flask app to serve up the dashboard  *
+- Flask app to serve up the dashboard. 
 
- 
-sql erd image * 
+### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
+
 dashboard image *
  

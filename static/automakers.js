@@ -18,6 +18,7 @@ d3.json(auto_data).then(function (data) {
 
   console.log(dataSet)
 });
+
 // d3 to load data
 d3.json(auto_stockfeed).then(function (stockfeed) {
   dataSet = stockfeed;
@@ -37,7 +38,6 @@ function init() {
 };
 
 init();
-
 
 function optionChanged(value) {
   option = value;
@@ -63,20 +63,29 @@ function displayHBarChart(option, dataSet) {
 
   for (let i = 0; i < dataSet.length; i++) {
     let element = dataSet[i];
-    if (element.Date === '2010-12-31') {
-      trace1.x.push(element.Symbol);
-      trace1.y.push(element.Close);
-      console.log('Added element to trace1:', element);
-    } else if (element.Date === '2022-12-31') {
-      trace2.x.push(element.Symbol);
-      trace2.y.push(element.Close);
-      console.log('Added element to trace2:', element);
+    let date = new Date(element.Date);
+    if (date >= new Date('2010-01-01') && date <= new Date('2022-12-31')) {
+      if (date >= new Date('2010-01-01') && date <= new Date('2010-12-31')) {
+        trace1.x.push(element.Symbol);
+        trace1.y.push(element.Close);
+      } else if (date >= new Date('2022-01-01') && date <= new Date('2022-12-31')) {
+        trace2.x.push(element.Symbol);
+        trace2.y.push(element.Close);
+      }
     }
-  }
-
+  };
+ 
   let data = [trace1, trace2];
 
-  let layout = { barmode: 'group' };
+  let layout = {barmode: 'group',
+  title: 'Automaker stock in 2010 vs 2022',
+  xaxis: {
+    title: 'Automaker Stock Symbol'
+  },
+  yaxis: {
+    title: 'Value'
+  }
+};
 
   Plotly.newPlot('bar', data, layout, option);
 };
@@ -115,9 +124,9 @@ function displayLineChart(option, dataSet) {
     yaxis: {
       title: 'Adjusted Close Value'
     },
-    title: 'Stock Value 2010-2022'
+    title: 'Stock Value 2010 to 2022'
   };
 
   Plotly.newPlot('line', data, layout);
 
-}
+};
