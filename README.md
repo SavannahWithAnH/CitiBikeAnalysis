@@ -17,7 +17,7 @@
 - Where are companies located? 
 
 # Data collection, cleaning, analysis, and visualization tools
-- Python to clean and convert csv files to json *
+- Python to clean and convert csv files to json
 - SQL to query creating tables, joining the data, and creating presentable output.
 - Leaflet for interactive world map
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
