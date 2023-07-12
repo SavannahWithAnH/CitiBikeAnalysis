@@ -5,7 +5,7 @@
 
 # Contributors & Responsibilities
 - Alex Kopp - Python/Flask App
-- Andrew Skorupa - SQL/Entity Relationship Diagram
+- Andrew Skorupa - SQL/Entity Relational Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
 - Mohamed Abouelkhier - HTML/CSS/Map
  
