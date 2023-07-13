@@ -19,12 +19,13 @@
 # Data collection, cleaning, analysis, and visualization tools
 - Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
-- Leaflet *** for interactive world map.
+- Leaflet 'TimeLineSlider' for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
-- Flask app using render_template to serve up the dashboard and jsonify to pull in data files enabling dashboard. 
+- Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard. 
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
 
-dashboard image *
+<img width="293" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/d766f1c9-96cb-4408-bdfa-412756267f8c">
+
  
