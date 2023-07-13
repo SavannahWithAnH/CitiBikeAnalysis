@@ -22,7 +22,7 @@
 - Leaflet *** for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
-- Flask app using render_template to serve up the dashboard. 
+- Flask app using render_template to serve up the dashboard and jsonify to pull in data files enabling dashboard. 
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
 
