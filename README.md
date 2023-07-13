@@ -32,9 +32,10 @@
 <img width="595" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/bb2230c1-9f88-423b-8259-35d8abaaa8ef">
 <img width="575" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/a2b2cc19-164d-48fe-8eae-833d57e3d228">
 
-Please visit our individual Github pages below
-[Alex Kopp](https://github.com/alexkopp12)
-[Andrew Skorupa](https://github.com/AndyMSkor)
-[Savannah Porter](https://github.com/SavannahWithAnH)
-[Mohamed Abouelkhier](https://github.com/nabroo101)
+
+Please visit our individual Github pages below  
+[Alex Kopp](https://github.com/alexkopp12)  
+[Andrew Skorupa](https://github.com/AndyMSkor)  
+[Savannah Porter](https://github.com/SavannahWithAnH)  
+[Mohamed Abouelkhier](https://github.com/nabroo101)  
  
