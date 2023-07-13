@@ -11,7 +11,7 @@
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
 - Mohamed Abou elkhier - HTML/CSS/Map
  
-## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the dataset at it's source!
+## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view one of our datasets at it's source!
 
 # Deliverables
 - What companies have gained the most market capitalization?
