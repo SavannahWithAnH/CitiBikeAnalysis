@@ -9,7 +9,7 @@
 - Alex Kopp - Python/Flask App
 - Andrew Skorupa - SQL/Entity Relational Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
-- Mohamed Abouelkhier - HTML/CSS/Map
+- Mohamed Abou elkhier - HTML/CSS/Map
  
 ## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the dataset at it's source!
 
@@ -38,5 +38,5 @@ Please visit our individual Github pages below
 [Alex Kopp](https://github.com/alexkopp12)  
 [Andrew Skorupa](https://github.com/AndyMSkor)  
 [Savannah Porter](https://github.com/SavannahWithAnH)  
-[Mohamed Abouelkhier](https://github.com/nabroo101)  
+[Mohamed Abou elkhier](https://github.com/nabroo101)  
  
