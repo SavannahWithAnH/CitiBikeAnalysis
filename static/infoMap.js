@@ -1,4 +1,3 @@
-
 //create base layer to the map
 // adding variables to the layer
 
@@ -12,19 +11,21 @@ let street = L.tileLayer(
   }
 );
 
-let Staellite = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-  attribution:
-    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' +
-    "<br> Analyst: Mo Abou <a href=https://github.com/nabroo101/leaflet-challenge> Github<a/>",
-});
+let Staellite = L.tileLayer(
+  "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+  {
+    attribution:
+      'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' +
+      "<br> Analyst: Mo Abou <a href=https://github.com/nabroo101/leaflet-challenge> Github<a/>",
+  }
+);
 
 let carManufacturers = new L.layerGroup(); // This layer group contains all the car manufacturer icons
-
 
 // creating a base map object
 let baseMaps = {
   "Street Map": street,
-  "Staellite": Staellite,
+  Staellite: Staellite,
 };
 
 let ranking = new L.layerGroup();
@@ -40,6 +41,63 @@ let myMap = L.map("map", {
   zoom: 2,
   layers: [street, ranking],
 });
+function getIconSize(marketcap){
+  // converting marketcap from string to a number
+  if(typeof marketcap !== 'string'){
+    return[30,30]
+  }
+  let cap = Number(marketcap.replace(/[^0-9.-]+/g,""));
+
+  // setting the marketcap to a reasonable cnumber so we can adjust size
+  let size = Math.sqrt(cap)/ 1000000;
+
+  //setting boundries for the size
+  if (size < 20) size = 20;
+  if (size > 100) size = 100;
+
+  return [size,size]
+}
+const largestData = "../Resources/infoMapData.json";
+
+//defininf the timeline variable and setting the parameters for certain years
+let timeline = L.control.timelineSlider({
+  timelineItems: ["Before", "After"],
+  changeMap: function ({ label, value, map }) {
+    console.log("Changed time to:", label);
+    d3.json(largestData).then(function (data){
+      let companies = reformatData(data);
+  
+      if (label === "After") {
+        carManufacturers.clearLayers();
+        companies.forEach((company) => {
+          let customIcon = L.icon({
+            iconUrl: company.Logo,
+            iconSize: getIconSize(company.marketcap),
+            iconAnchor: [19, 19],
+            popupAnchor: [-3, -76],
+          });
+        // assigning the marker to a variable
+        let marker = L.marker([company.Latitude, company.Longitude], {
+          icon: customIcon,
+        });
+        marker
+          .bindPopup(
+            `<h3>${company.Name}</h3>
+            <h2>rank: ${company.Rank}</h2>
+            <p>Market Cap: ${company.marketcap}<br>Price (USD): ${company["price (USD)"]}</p>`
+          )
+          .on("click", function (e) {
+            myMap.setView(e.latlng, 8);
+          })
+          .addTo(carManufacturers);
+      });
+    }
+  });
+  },
+})
+
+
+timeline.addTo(myMap);
 
 let originalZoom = myMap.getZoom();
 let originalCenter = myMap.getCenter();
@@ -50,13 +108,12 @@ L.control
   })
   .addTo(myMap);
 
-
-//creating a button element 
-let exitButton = L.control({ position: 'bottomright' });
+//creating a button element
+let exitButton = L.control({ position: "bottomright" });
 
 exitButton.onAdd = function (myMap) {
-  this._div = L.DomUtil.create('div', "exit-button");
-  this._div.innerHTML = 'Exit';
+  this._div = L.DomUtil.create("div", "exit-button");
+  this._div.innerHTML = "Exit";
   this._div.onmousedown = this._div.onclick = function () {
     myMap.setView(originalCenter, originalZoom);
   };
@@ -65,17 +122,11 @@ exitButton.onAdd = function (myMap) {
 // Adding the exit button to the map
 exitButton.addTo(myMap);
 
-
 // Event listener for the button
-document.querySelector('.exit-button').addEventListener('click', function () {
+document.querySelector(".exit-button").addEventListener("click", function () {
   myMap.setView(originalCenter, originalZoom);
 });
 
-
-
-
-
-const largestData = "../Resources/infoMapData.json";
 
 // converting the json file to a difrrent format
 function reformatData(data) {
@@ -100,30 +151,33 @@ function reformatData(data) {
 
   return result;
 }
-//using D3 to impoort json file largestData
-d3.json(largestData).then(function (data) {
-  let companies = reformatData(data);
-  //looping over the list of companies and adding each company as a marker to the map
 
-  companies.forEach((company) => {
-    let customIcon = L.icon({
-      iconUrl: company.Logo,
-      iconSize: [30, 30],
-      iconAnchor: [19, 19],
-      popupAnchor: [-3, -76],
-    });
-    // assigning the marker to a variable
-    let marker = L.marker([company.Latitude, company.Longitude], { icon: customIcon });
-    marker.bindPopup(
-      `<h3>${company.Name}</h3>
-        <h2>rank: ${company.Rank}</h2>
-        <p>Market Cap: ${company.marketcap}<br>Price (USD): ${company["price (USD)"]}</p>`
-    )
-      .on('click', function (e) {
-        myMap.setView(e.latlng, 8)
-      }).addTo(carManufacturers)
-  });
-  });
+//using D3 to impoort json file largestData
+
+  //looping over the list of companies and adding each company as a marker to the map
+//   companies.forEach((company) => {
+//     let customIcon = L.icon({
+//       iconUrl: company.Logo,
+//       iconSize: [30, 30],
+//       iconAnchor: [19, 19],
+//       popupAnchor: [-3, -76],
+//     });
+//     // assigning the marker to a variable
+//     let marker = L.marker([company.Latitude, company.Longitude], {
+//       icon: customIcon,
+//     });
+//     marker
+//       .bindPopup(
+//         `<h3>${company.Name}</h3>
+//         <h2>rank: ${company.Rank}</h2>
+//         <p>Market Cap: ${company.marketcap}<br>Price (USD): ${company["price (USD)"]}</p>`
+//       )
+//       .on("click", function (e) {
+//         myMap.setView(e.latlng, 8);
+//       })
+//       .addTo(carManufacturers);
+//   });
+// });
 //refrences: https://leaflet-extras.github.io/leaflet-providers/preview/ for the base map
 //https://stackoverflow.com/questions/16927793/marker-in-leaflet-click-event for the zoom in and center markers when clicked
-// https://www.investing.com/academy/statistics/tesla-facts/
+// https://www.investing.com/academy/statistics/tesla-facts
