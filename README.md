@@ -31,7 +31,7 @@
 
 <img width="595" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/bb2230c1-9f88-423b-8259-35d8abaaa8ef">
 <img width="575" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/a2b2cc19-164d-48fe-8eae-833d57e3d228">
-
+<br>
 <br>
 
 Please visit our individual Github pages below  
