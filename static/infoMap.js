@@ -126,3 +126,4 @@ d3.json(largestData).then(function (data) {
   });
 //refrences: https://leaflet-extras.github.io/leaflet-providers/preview/ for the base map
 //https://stackoverflow.com/questions/16927793/marker-in-leaflet-click-event for the zoom in and center markers when clicked
+// https://www.investing.com/academy/statistics/tesla-facts/
