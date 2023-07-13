@@ -34,7 +34,7 @@
 <br>
 <br>
 
-Please visit our individual Github pages below  
+**Please visit our individual Github pages below**  
 [Alex Kopp](https://github.com/alexkopp12)  
 [Andrew Skorupa](https://github.com/AndyMSkor)  
 [Savannah Porter](https://github.com/SavannahWithAnH)  
