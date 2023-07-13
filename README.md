@@ -33,6 +33,7 @@
 <img width="575" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/a2b2cc19-164d-48fe-8eae-833d57e3d228">
 
 <br>
+
 Please visit our individual Github pages below  
 [Alex Kopp](https://github.com/alexkopp12)  
 [Andrew Skorupa](https://github.com/AndyMSkor)  
