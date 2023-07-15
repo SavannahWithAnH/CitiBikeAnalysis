@@ -19,18 +19,22 @@
 - Where are companies located? 
 
 # Data collection, cleaning, analysis, and visualization tools
-- Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
-    - PART 1 Datebase and table setup
-    - PART 2 Data validation and exploration
-    - PART 3 Data Analysis:
+    - PART 1: Datebase and table setup
+    - PART 2: Data validation and exploration
+    - PART 3: Data Analysis:
         - Ranking companies excluding Tesla.
         - Finding the top ten countries by market capitalization.
         - Querying data specifically for Tesla.
         - Calculating market capitalization using share price and volume information.
+- Python to clean and convert csv files to json.
+- CSS for styling and we broke it down to 3 PARTS
+    - Part 1: This section sets up basic HTML and body settings like setting the height to 100%. It also sets up the #map element's height and width.
+    - Part 2: This section includes styles for specific elements or classes.We define the dimensions for the .img-flag class, styles for the .well class, etc.
+    - PART 3: This part of your CSS code includes the styles for the .exit-button class which is a button in the map to zoom out to original view.
 - Leaflet 'TimeLineSlider' for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
-- Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
+- Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting.
 - Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/SQL/ERD.png)
