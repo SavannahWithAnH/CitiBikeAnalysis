@@ -62,7 +62,7 @@ function markerSize(magnitude) {
   return magnitude / 2; // Adjust the division factor as needed
 }
 let timeline = L.control.timelineSlider({
-  timelineItems: ["2010", "2012"],
+  timelineItems: ["Before", "After"],
   changeMap: function ({ label, value, map }) {
     console.log("Changed time to:", label);
     d3.json(largestData).then(function (data){

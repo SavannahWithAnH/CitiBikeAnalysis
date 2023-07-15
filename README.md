@@ -1,15 +1,17 @@
-## Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
+# Automaker Stock Data
 
 # Topic
 - Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
+  
+### Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
 
 # Contributors & Responsibilities
 - Alex Kopp - Python/Flask App
 - Andrew Skorupa - SQL/Entity Relational Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
-- Mohamed Abouelkhier - HTML/CSS/Map
+- Mohamed Abou elkhier - HTML/CSS/Map
  
-## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view the dataset at it's source!
+## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view one of our datasets at it's source!
 
 # Deliverables
 - What companies have gained the most market capitalization?
@@ -19,12 +21,29 @@
 # Data collection, cleaning, analysis, and visualization tools
 - Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
-- Leaflet *** for interactive world map.
+    - PART 1 Datebase and table setup
+    - PART 2 Data validation and exploration
+    - PART 3 Data Analysis:
+        - Ranking companies excluding Tesla.
+        - Finding the top ten countries by market capitalization.
+        - Querying data specifically for Tesla.
+        - Calculating market capitalization using share price and volume information.
+- Leaflet 'TimeLineSlider' for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
-- Javascript, d3, HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
-- Flask app using render_template to serve up the dashboard and jsonify to pull in data files enabling dashboard. 
+- Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
+- Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
 
-### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/ERD.png)
+### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/SQL/ERD.png)
+<br>
 
-dashboard image *
+<img width="595" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/bb2230c1-9f88-423b-8259-35d8abaaa8ef">
+<img width="575" alt="image" src="https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/assets/126124356/a2b2cc19-164d-48fe-8eae-833d57e3d228">
+<br>
+<br>
+
+**Please visit our individual Github pages below**  
+[Alex Kopp](https://github.com/alexkopp12)  
+[Andrew Skorupa](https://github.com/AndyMSkor)  
+[Savannah Porter](https://github.com/SavannahWithAnH)  
+[Mohamed Abou elkhier](https://github.com/nabroo101)  
  

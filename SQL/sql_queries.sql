@@ -1,3 +1,5 @@
+--PART 1 Datebase and table setup
+--createing a table named market_cap_rank and populate it with data.
 create table market_cap_rank (
 	Market_Cap_Rank INT,
 	Company_Name varchar,
@@ -5,8 +7,9 @@ create table market_cap_rank (
 	Market_Cap bigint,
 	Stock_Price numeric,
 	Country varchar);
+---------------------------------------------------------------------
 
-
+--PART 2 Data validation and exploration
 --make sure data is there from table 1	
 select * from market_cap_rank;
 
@@ -33,8 +36,9 @@ from High_Low
 join Market_Cap_Rank
 on High_Low.Stock_Symbol = Market_Cap_Rank.Company_Symbol
 Order By High_Low.The_Date DESC, High_Low.Share_Volume DESC;
+----------------------------------------------------------------------------
 
-
+--PART 3 Data Analysis
 --without Tesla
 select market_cap_rank - 1 AS "New Rank",
 		market_cap_rank as "Old Rank",
@@ -75,7 +79,5 @@ select the_date as "Date",
 		floor(price_high) * floor(share_volume) as "Market Capitalization"
 from high_low
 where stock_symbol = 'TSLA';
-
-
-
-
+-----------------------------------------------------------------------------------
+ 
