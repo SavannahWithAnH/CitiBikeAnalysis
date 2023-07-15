@@ -21,6 +21,13 @@
 # Data collection, cleaning, analysis, and visualization tools
 - Python to clean and convert csv files to json.
 - SQL to query creating tables, joining the data, and creating presentable output.
+    - PART 1 Datebase and table setup
+    - PART 2 Data validation and exploration
+    - PART 3 Data Analysis:
+        - Ranking companies excluding Tesla.
+        - Finding the top ten countries by market capitalization.
+        - Querying data specifically for Tesla.
+        - Calculating market capitalization using share price and volume information.
 - Leaflet 'TimeLineSlider' for interactive world map.
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting. 
