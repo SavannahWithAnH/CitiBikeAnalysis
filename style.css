@@ -1,4 +1,7 @@
-/* Remove the default margin and padding from the body. */
+/*PART 1 
+Remove the default margin and padding from the body.
+ */
+
 body,
 html {
   padding: 0;
@@ -11,8 +14,10 @@ html {
   height: 500px;
   width: 100%;
 }
+/* ==================================================================== */
 
-/* set logo for car manfacturuer */
+/*PART 2
+ set logo for car manfacturuer */
 .img-flag {
   height: 50px;
   width: 50px;
@@ -28,7 +33,10 @@ html {
   display: block;
   width: 80%;
 }
+/* ======================================================================= */
 
+/* PART 3 
+adding a button to the map in the bottom right*/
 .exit-button {
   background-color: rgba(76, 175, 80, 0.5);
   border: none;
