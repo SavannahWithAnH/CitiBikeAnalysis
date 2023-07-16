@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Stylesheets: bootstrap for web design ,Leaflet for interactive world map and our local style.css file -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Automaker Stock Price Analysis Post Tesla IPO</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="../style.css" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-        crossorigin=""></script> -->
-
+    <!-- jQuery , and the local javascript file leaflet-timeline-slider.js from the plugin libary in leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../static/leaflet-timeline-slider.js"></script>
 </head>
 
 <body>
+    <!-- headlines in the webpage -->
     <div class="container">
-        <div class="row">
+        <div class="row"> 
             <div class="col-md-12 jumbotron text-center">
                 <h2>Automanufacturer stock price following the IPO of Tesla (2010-2022)</h2>
-                <p>Explore the interactive charts below to understand the impact of Tesla's IPO on other automakers' stock prices</p>
+                <p>Explore the interactive charts below to understand the impact of Tesla's IPO on other automakers'
+                    stock prices</p>
             </div>
         </div>
 
+        <!-- the map section in the webpage -->
         <div class="row">
             <div class="col-md-12 custom-height">
                 <div id="map" style="height: 500px;"></div>
             </div>
         </div>
-        
+
+        <!-- section where the drop down is located with the company sympols -->
         <div class="row">
             <div class="col-md-3">
                 <div class="well">
                     <h5>Select Automaker:</h5>
                     <select id="selDataset" onchange="optionChanged(this.value)"></select>
                     <p>TSLA: Tesla <br>
-                      TM: Toyota<br>
-                      VOW3.DE: Volkswagen<br>
-                      002594.SZ: BYD<br>
-                      DAI.DE: Daimler<br>
-                      GM: General Motors<br>
-                      F: Ford<br>
-                      BMW.DE: BMW<br>
-                      STLA: Stellantis<br>
-                      HMC: Honda</p>
+                        TM: Toyota<br>
+                        VOW3.DE: Volkswagen<br>
+                        002594.SZ: BYD<br>
+                        DAI.DE: Daimler<br>
+                        GM: General Motors<br>
+                        F: Ford<br>
+                        BMW.DE: BMW<br>
+                        STLA: Stellantis<br>
+                        HMC: Honda</p>
                 </div>
             </div>
-
+            <!-- section for the line chart -->
             <div class="col-md-9">
                 <div id="line"></div>
             </div>
         </div>
-
+        <!-- section for the bar chart -->
         <div class="row">
             <div class="col-md-12">
                 <div id="bar"></div>
             </div>
         </div>
     </div>
-
+    <!-- These are the scripts needed for our charts and other interactive elements. -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="../static/infoMap.js"></script>
@@ -74,4 +76,5 @@
 
 
 </body>
+
 </html>

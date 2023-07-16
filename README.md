@@ -32,7 +32,12 @@
     - Part 1: This section sets up basic HTML and body settings like setting the height to 100%. It also sets up the #map element's height and width.
     - Part 2: This section includes styles for specific elements or classes.We define the dimensions for the .img-flag class, styles for the .well class, etc.
     - PART 3: This part of your CSS code includes the styles for the .exit-button class which is a button in the map to zoom out to original view.
-- Leaflet 'TimeLineSlider' for interactive world map.
+- HTML for constructing the web page which divided to 3 sections:
+    - Header : it includes doctype, metadta and various sylesheets and scripts.
+    - Stylesheets: bootstrap for web design ,Leaflet for interactive map and local style. css file
+    - Body content : It includes containers for our map, line chart, and bar chart. It also has a drop-down selector and information panel.
+    - Scripts: jQuery , and the local javascript file leaflet-timeline-slider.js
+
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting.
 - Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
