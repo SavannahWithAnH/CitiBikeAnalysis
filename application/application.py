@@ -37,3 +37,29 @@ def about():
 # This command actually starts the web server.
 if __name__ == '__main__':
     app.run()
+
+
+# Memo:
+# 1. Install Flask: If Flask is not already installed, install it using pip:
+#    pip install flask
+
+# 2. Create a new Python file (e.g., app.py) and import the Flask module:
+#    from flask import Flask
+
+# 3. Create an instance of the Flask class:
+#    app = Flask(__name__)
+
+# 4. Define a route and its associated view function:
+#    @app.route('/')
+#    def home():
+#        return 'Hello, World!'
+
+# 5. Run the application:
+#    if __name__ == '__main__':
+#        app.run()
+
+# The '@app.route' function decorator is used to bind a function to a URL route. 
+# So, in this case, if a user goes to the home page of your application (e.g., http://localhost:5000/),
+# 'Hello, World!' will be displayed in their browser.
+
+# Running 'app.run()' starts the Flask development server and will start listening for requests on localhost:5000 by default.
