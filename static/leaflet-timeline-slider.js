@@ -313,3 +313,5 @@ L.Control.TimeLineSlider = L.Control.extend({
 L.control.timelineSlider = function(options) {
     return new L.Control.TimeLineSlider(options);
 }
+
+// this is a file was included with leaflet plug-in
