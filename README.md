@@ -1,25 +1,30 @@
-# Automaker Stock Data
+# Automaker Stock Data Analysis & Visualization
 
-# Topic
-- Automanufacturer stock price changes following the IPO of Tesla (2010-2022)
+**Topic:** Analysis of Auto manufacturer's stock price changes following the IPO of Tesla (2010-2022)
   
-### Please see our proposal [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
+## Project Proposal
+For a detailed project proposal, please click [here](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/Group%204%20Proposal.docx) and select 'View raw'.
+
 
 # Contributors & Responsibilities
 - Alex Kopp - Python/Flask App
 - Andrew Skorupa - SQL/Entity Relational Diagram
 - Savannah Porter - Data Conversions/Javascript/Bar & Line Charts
-- Mohamed Abou elkhier - HTML/CSS/Map
+- Mohamed Abou elkhier - HTML/CSS/Map/JavaScript
  
-## Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view one of our datasets at it's source!
+## Datasets
+Click [here](https://www.kaggle.com/datasets/prasertk/top-48-automakers-daily-stock-prices-20102022) to view one of our primary datasets!
 
-# Deliverables
-- What companies have gained the most market capitalization?
-- What companies have lost the most market capitalization?
-- Where are companies located? 
+
+## Project Deliverables
+Our project will provide answers to the following questions:
+- Which companies have gained the most market capitalization post the IPO of Tesla?
+- Which companies have lost the most market capitalization post the IPO of Tesla?
+- Where are these companies located globally? 
+
 
 # Data collection, cleaning, analysis, and visualization tools
-- SQL to query creating tables, joining the data, and creating presentable output.
+- SQL for database and table setup, data validation, exploration, and analysis. we divided to 3 parts
     - PART 1: Datebase and table setup
     - PART 2: Data validation and exploration
     - PART 3: Data Analysis:
@@ -31,7 +36,7 @@
     <img width="500" alt="image" src="./SQL/ERD.png">
 
 
-- Python to clean and convert csv files to json.
+- Python and panda to clean and convert csv files to json.
 
 - CSS for styling and we broke it down to 3 PARTS
     - Part 1: This section sets up basic HTML and body settings like setting the height to 100%. It also sets up the #map element's height and width.
