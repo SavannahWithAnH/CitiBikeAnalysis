@@ -1,3 +1,12 @@
+// infoMap.js: This JavaScript code mainly functions to generate an interactive map using the Leaflet library. It visualizes different car manufacturers around the globe. The map's primary features include customized marker icons based on company rankings, a timeline slider, and an 'exit' button to revert the map to the initial view.
+// - Function getIconSize(rank, symbol): This function calculates the size of a marker icon based on a company's rank. Tesla is assigned a fixed size, whereas the size of other companies' markers is adjusted based on their ranking, with the number one is the biggest and number ten is the smallest
+// - Function reformatData(data): This function reformats the data for ease of use. It loops through the input data and reformats it into an array of objects, each containing information about a company.
+// - Layer Initialization: Two tile layers are created, one for 'street' view and another for 'satellite' view. Layer groups for car manufacturers and rankings are also initialized. Then a map is created with the 'street' view and 'ranking' layers.
+// - Loading Data and Timeline Slider: The data is loaded from a JSON file. A timeline control slider is added to the map. When the user changes the timeline, the data is reloaded, and markers representing car manufacturers are created and added to the 'carManufacturers' layer group. These markers have custom icons and a click event that zooms into the marker's location.
+// - Layer Control Addition: Layer controls are added to the map, which allow users to toggle between 'street' and 'satellite' views, and between 'ranking' and 'manufacturer info'.
+// - Exit Button: An exit button is added to the bottom right of the map. Clicking this button reverts the map view back to its original center and zoom level.
+
+
 // Calculates the size of the marker icon based on rank , however tesla is set to be biggest
 function getIconSize(rank, symbol) {
   if (symbol === "TSLA") {
