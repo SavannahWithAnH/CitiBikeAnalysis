@@ -62,8 +62,9 @@ Our project will provide answers to the following questions:
     - leaflet-timeline-slider.js: Leaflet plugin that creates a customizable timeline slider. Original implementation of timeline at https://svitkin.github.io/leaflet-timeline-slider/ 
 
 - Plotly for interactive bar and line graphs visualizing stock price changes over time. 
- 
-- Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
+
+- Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard. please check 'Memo' in our application.py for more info.
+
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/SQL/ERD.png)
 <br>
