@@ -61,8 +61,8 @@ Our project will provide answers to the following questions:
         - Exit Button: An exit button is added to the bottom right of the map. Clicking this button reverts the map view back to its original center and zoom level.
     - leaflet-timeline-slider.js: Leaflet plugin that creates a customizable timeline slider. Original implementation of timeline at https://svitkin.github.io/leaflet-timeline-slider/ 
 
-- Plotly for interactive bar and line graphs visualizing stock price changes over time.  
-- Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting.
+- Plotly for interactive bar and line graphs visualizing stock price changes over time. 
+ 
 - Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
 
 ### [Entity Relational Diagram](https://github.com/SavannahWithAnH/TopAutomakersStock_Visualizations/blob/main/SQL/ERD.png)
