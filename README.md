@@ -27,6 +27,9 @@
         - Finding the top ten countries by market capitalization.
         - Querying data specifically for Tesla.
         - Calculating market capitalization using share price and volume information.
+    - Entity Relationship Diagram was also created using pgAdmin4 and saved as "ERD.png" to represent the visual of the relationship between our two data set 
+    <img width="500" alt="image" src="./SQL/ERD.png">
+
 
 - Python to clean and convert csv files to json.
 
@@ -52,7 +55,7 @@
         - Layer Control Addition: Layer controls are added to the map, which allow users to toggle between 'street' and 'satellite' views, and between 'ranking' and 'manufacturer info'.
         - Exit Button: An exit button is added to the bottom right of the map. Clicking this button reverts the map view back to its original center and zoom level.
     - leaflet-timeline-slider.js: Leaflet plugin that creates a customizable timeline slider. Original implementation of timeline at https://svitkin.github.io/leaflet-timeline-slider/ 
-    
+
 - Plotly for interactive bar and line graphs visualizing stock price changes over time.  
 - Javascript utilizing 'd3', HTML, and CSS to create and display interactive graphs & charts with proper formatting.
 - Flask app using 'render_template' to serve up the dashboard and jsonify to pull in data files enabling dashboard.
