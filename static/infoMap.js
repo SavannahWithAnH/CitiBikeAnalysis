@@ -165,3 +165,21 @@ exitButton.addTo(myMap);
 document.querySelector(".exit-button").addEventListener("click", function () {
   myMap.setView(originalCenter, originalZoom);
 });
+
+// Memo:
+// 1. getIconSize(rank, symbol): This function is used to determine the size of the marker icon for each company on the map.Tesla is given a fixed size,
+//  while the sizes of other companies are based on their rankings.This means that higher - ranking companies have larger markers.
+
+// 2. reformatData(data): This function is used to convert the raw input data into a more usable format.T
+// he function transforms the data into an array of objects, each representing a company with relevant details.
+
+// 3. Layer Initialization: This segment of the code initiates two types of layers for the map - 'street' view and 'satellite' view.
+// Layer groups for different car manufacturers and their rankings are also created.
+
+// 4. Loading Data and Timeline Slider: In this section, the data is loaded from a JSON file.A timeline control slider is also added to the map.
+// When a user interacts with the timeline slider, the data is reloaded, and the corresponding markers for that time period are added to the map.
+
+// 5. Layer Control Addition: Layer controls are added to the map, allowing users to switch between 'street' and 'satellite' views 
+// and between 'ranking' and 'manufacturer info'.
+
+// 6. Exit Button: An exit button is added to the bottom right of the map.When clicked, the map view reverts back to its original center and zoom level.
