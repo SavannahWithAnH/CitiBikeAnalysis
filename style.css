@@ -53,3 +53,25 @@ adding a button to the map in the bottom right*/
 .large-text {
   font-size: 18px; /* Adjust the font size as desired */
 }
+
+/* Memo: 
+
+Part 1 - Body and Map Styling
+  The first part of the CSS file focuses on removing the default padding and margins from the webpage.
+  This is done using the 'padding: 0' and 'margin: 0' CSS properties on both the 'body' and 'html' elements.
+  It also ensures that the body and html occupy 100% of the screen height using the 'height: 100%' property.
+  The map element is then given a height of 500 pixels and a width of 100%, making it responsive to screen width.
+
+Part 2 - Logo and General Styling
+  This part of the CSS file caters to the images used as logos for car manufacturers and a section called 'well'.
+  The 'img-flag' class defines a standard size for the logos, and the 'custom-width' class is used for setting
+  a specific width to certain elements. The 'well' class centers itself automatically on the page,
+  with a top margin for separation from the elements above, and occupies 80% of the container's width. 
+
+Part 3 - Button and Text Styling
+  Lastly, the third part of the CSS file styles a button that is intended to be placed in the bottom right corner
+  of the map. The 'exit-button' class applies several properties to this button, such as background color, border,
+  color of the text, padding, text alignment, display type, font size, margin, cursor type, and border-radius. 
+  The 'large-text' class is used to define a larger font size for particular texts. */
+    
+    
