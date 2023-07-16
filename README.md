@@ -41,7 +41,7 @@ Our project will provide answers to the following questions:
 - CSS for styling and we broke it down to 3 PARTS
     - Part 1: This section sets up basic HTML and body settings like setting the height to 100%. It also sets up the #map element's height and width.
     - Part 2: This section includes styles for specific elements or classes.We define the dimensions for the .img-flag class, styles for the .well class, etc.
-    - PART 3: This part of your CSS code includes the styles for the .exit-button class which is a button in the map to zoom out to original view.
+    - PART 3: This part of our CSS code includes the styles for the .exit-button class which is a button in the map to zoom out to original view.
 
 - HTML for constructing the web page which divided to 3 sections:
     - Header : it includes doctype, metadta and various sylesheets and scripts.
