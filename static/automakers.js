@@ -151,3 +151,25 @@ function displayLineChart(option, dataSet) {
 
   Plotly.newPlot("line", data, layout);
 }
+
+
+// MeMo: 
+
+// Data Loading: D3.js is used to load data from JSON files.
+
+// Data Visualization: Plotly.js is used to plot the data into line and bar charts.
+
+// Dropdown menu: The value selected in the dropdown menu determines the data to be visualized.
+
+// Initialization: By default, data for Tesla ('TSLA') is displayed when the webpage loads.
+
+// Updating Charts: When a different automaker is selected from the dropdown, the charts update to reflect the new data.
+
+
+// How to Run
+
+// Ensure that you have a web server set up to serve your HTML, CSS, and JavaScript files.
+
+// Open the HTML file in a web browser. The webpage should automatically display the line and bar charts for Tesla.
+
+// Select a different automaker from the dropdown menu to update the charts with the new data.
